@@ -95,7 +95,6 @@ nav .content2 a p {
     text-align: center;
 }
 .hero-container div:nth-child(2) img{
-    /* min-width: 50rem; */
     min-height: 24rem;
     height: 100%;
     
@@ -169,6 +168,13 @@ main section{
 .josefin-font{
     font-family: 'Josefin Sans', sans-serif;
 }
+.username{
+    color: white;
+    margin-block: auto;
+    margin-inline-end: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
 footer{
     display: flex; 
     justify-content: center;
@@ -188,6 +194,17 @@ footer p {
     text-align: center;
     font-weight: 600;
 }
+/* ANIMACIONES */
+.delated-fade-in{-webkit-animation:delated-fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:delated-fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both}
+@-webkit-keyframes delated-fade-in{0%{opacity:0}100%{opacity:1}}@keyframes delated-fade-in{0%{opacity:0}100%{opacity:1}}
+
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+.bgblack{
+    background-color: black;
+}
+
 @media(max-width: 88em){
     .hero-container div{
         justify-content: start;

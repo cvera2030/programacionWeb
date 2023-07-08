@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Karla:wght@400;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/gallery.css' %}">
-    <title>Document</title>
+    <title>Galeria - Grupo Cero</title>
 </head>
 <body>
     <header>
@@ -28,14 +28,19 @@
                 </a>
             </section>
             <section class="content2">
-                <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% if user.is_authenticated %}
+                    <p class="bold smallest-font username">{{ user.username }}</p>
+                    <a href="{% url 'logout_user'%}"><p class="bold smallest-font">CERRAR SESIÓN</p></a>
+                    {% else %}
+                    <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% endif%}
                 <img src="{% static 'img/shoping-cart.png' %}" alt="">
             </section>
         </nav>
     </header>
     
-    <main>
-        <section class="description">
+    <main class="">
+        <section class="description delated-fade-in">
             <div class="content">
                 <p class="josefin-font medium-font">🛍️ ¡ELIGE TUS FAVORITOS EN NUESTRA GALERIA DE ARTE! 🛍️</p>
                 <p class="josefin-font smallest-font">Navega por nuestra galería, disfruta de la variedad y el encanto de cada creación y selecciona las obras que más te inspiren. Añade tus favoritos al carrito y prepárate para llevar el arte y la belleza a tu hogar. ¡Felices compras! 🎨💍🧣🛒</p>
@@ -46,21 +51,116 @@
             </div>
         </section>
 
-        <section class="shop-articles">
+        <section class="shop-articles fade-in">
             <div class="search-bar"></div>
             <div class="articles-list">
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
-                <article class="shop-item"></article>
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a1.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Lana Crochet Rosada Pastel</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$9.900</p>
+                            <p>Stock: 2</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a2.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Lana Crochet Celeste Pastel</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$9.900</p>
+                            <p>Stock: 4</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a3.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Anillo 18k Diamante</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$590.900</p>
+                            <p>Stock: 2</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a4.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Lienzo Pintura Blanco</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$17.990</p>
+                            <p>Stock: 7</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a5.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Escultura Buda</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$4.290</p>
+                            <p>Stock: 9</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a6.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Set de Lapices Faber Castell</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$45.900</p>
+                            <p>Stock: 5</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="shop-item">
+                    <div class="img-container">
+                        <img src="{% static 'img/articles/a7.png'%}" alt="">
+                    </div>
+                    <div class="info-container josefin-font">
+                        <div class="product-description bolder">
+                            <p>Escultura Buda Risa Dorada</p>
+                        </div>
+                        <div class="product-price-stock">
+                            <p class="bolder">$5.490</p>
+                            <p>Stock: 6</p>
+                        </div>
+                    </div>
+                </article>
+                
             </div>
         </section>
     </main>
-    <footer class="box-shadow smallest-font">
+    <footer class="box-shadow fade-in">
         <p>Carlos Vera - Nicolás Acuña - Bryan Moscoso</p>
         <p>GrupoCero@2023</p>
     </footer>

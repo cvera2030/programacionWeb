@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Karla:wght@400;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'styles/home.css' %}">
-    <title>Document</title>
+    <title>Grupo Cero</title>
 </head>
 <body>
     <header>
@@ -29,7 +29,12 @@
                 </a>
             </section>
             <section class="content2">
-                <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% if user.is_authenticated %}
+                    <p class="bold smallest-font username">{{ user.username }}</p>
+                    <a href="{% url 'logout_user'%}"><p class="bold smallest-font">CERRAR SESIÓN</p></a>
+                    {% else %}
+                    <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% endif%}
                 <img src="{% static 'img/shoping-cart.png' %}" alt="">
             </section>
         </nav>
@@ -37,19 +42,19 @@
 
     <section class="hero-container">
         <div>
-            <div class="hero-content">
+            <div class="hero-content delated-fade-in">
                 <h1>GRUPO CERO</h1>
                 <p>Explora accesorios únicos: orfebrería con diamantes y minerales preciosos, además de prendas tejidas en lana.</p>
                 <p>¡Eleva tu estilo! ✨🧶</p>
-                    <button class="call-to-action">EXPLORAR</button>
+                <button class="call-to-action">EXPLORAR</button>
             </div>
         </div>
-        <div class="flex-jc-end-ov-hidden">
+        <div class="flex-jc-end-ov-hidden fade-in">
             <img src="{% static 'img/Hero-bg-img.png' %}" alt="">
         </div>
 
     </section>
-    <main>
+    <main class="fade-in">
         <section>
             <div class="carousel-container">
                 <div id="carousel1" class="carousel slide" data-ride="carousel">
@@ -71,7 +76,7 @@
             <p class="small-font">Además, ven y maravíllate con nuestras prendas tejidas en lana, creadas con amor y habilidad para ofrecerte comodidad y estilo en cada puntada. ¡No esperes más! Te invitamos a explorar nuestra tienda y descubrir las maravillosas creaciones que tenemos para ti. ¡Estamos seguros de que encontrarás algo que te encante! 💎🧶💖 </p>
         </section>
     </main>
-    <footer class="box-shadow smallest-font">
+    <footer class="box-shadow smallest-font fade-in">
         <p>Carlos Vera - Nicolás Acuña - Bryan Moscoso</p>
         <p>GrupoCero@2023</p>
     </footer>

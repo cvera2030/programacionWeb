@@ -113,6 +113,43 @@ main{
     border-radius: 10px;
     background-color: white;
 }
+.img-container{
+    width: 100%;
+}
+.img-container img{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 10px;
+    height: 33.5%;
+}
+.product-description{
+    padding: 5px;
+    width: 60%;
+}
+.product-description > p {
+    font-size: clamp(0.7rem, 1.2vw + 0.1rem, 1rem);
+    margin-block: auto;
+}
+.product-price-stock{
+    padding: 5px;
+    width: 40%;
+}
+.product-price-stock p {
+    font-size: clamp(0.75rem, 1.2vw + 0.1rem, 1rem);
+    margin: 0;
+}
 
 /* Seccion de abajo */
 footer{
@@ -154,12 +191,31 @@ footer p {
 .bold{
     font-weight: 600;
 }
+.bolder{
+    font-weight: 700;
+}
 .karla-font{
     font-family: 'Karla', sans-serif;
 }
 .josefin-font{
     font-family: 'Josefin Sans', sans-serif;
 }
+.username{
+    color: white;
+    margin-block: auto;
+    margin-inline-end: 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* ANIMACIONES */
+.delated-fade-in{-webkit-animation:delated-fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) 1s both;animation:delated-fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) .7s both}
+@-webkit-keyframes delated-fade-in{0%{opacity:0}100%{opacity:1}}@keyframes delated-fade-in{0%{opacity:0}100%{opacity:1}}
+
+.fade-in{-webkit-animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both;animation:fade-in 1.2s cubic-bezier(.39,.575,.565,1.000) both}
+@-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+
+
 
 /* Media Queries */
 @media(max-width: 88em){

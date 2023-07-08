@@ -3,3 +3,6 @@ CALL_TO_ACTION.addEventListener('click', (e)=>{
     e.preventDefault();
     window.location.href = '/galeria'
 })
+
+
+

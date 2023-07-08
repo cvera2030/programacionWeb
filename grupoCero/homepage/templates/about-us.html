@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Karla:wght@400;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'styles/about-us.css' %}">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about-us.css' %}">
+    <title>Quienes Somos - Grupo Cero</title>
 </head>
 <body>
     <header>
@@ -28,14 +28,19 @@
                 </a>
             </section>
             <section class="content2">
-                <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% if user.is_authenticated %}
+                    <p class="bold smallest-font username">{{ user.username }}</p>
+                    <a href="{% url 'logout_user'%}"><p class="bold smallest-font">CERRAR SESIÓN</p></a>
+                    {% else %}
+                    <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                {% endif%}
                 <img src="{% static 'img/shoping-cart.png' %}" alt="">
             </section>
         </nav>
     </header>
     
     <main>
-        <section class="articles-container josefin-font">
+        <section class="articles-container josefin-font fade-in">
             <article class="box-shadow">
                 <h3 class="medium-font bold">Historia</h3>
                 <p class="small-font">Nos complace presentarles la tienda Grupo Cero, constituida por Nicolás Acuña, Carlos Vera y Bryan Moscoso.</p>
@@ -54,7 +59,7 @@
             </article>
         </section>
 
-        <section class="video-container">
+        <section class="video-container fade-in">
             <iframe src=" https://www.youtube.com/embed/2octRU_AsFw" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -62,7 +67,7 @@
             </iframe>
         </section>
 
-        <section class="form-container manjari-font box-shadow">
+        <section class="form-container manjari-font box-shadow fade-in">
             <h2 class="big-font bold">¿Quieres colaborar con nosotros?</h2>
             <p class="medium-font">Envíanos un correo y te responderemos a la brevedad.</p>
             <form action="">
@@ -76,7 +81,7 @@
         </section>
     </main>
 
-    <footer class="box-shadow smallest-font">
+    <footer class="box-shadow smallest-font fade-in">
         <p>Carlos Vera - Nicolás Acuña - Bryan Moscoso</p>
         <p>GrupoCero@2023</p>
     </footer>
