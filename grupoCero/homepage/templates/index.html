@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Karla:wght@400;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="content1">
+                <img src="{% static 'img/Logo.png' %}" alt="">
+                <a href="/">
+                    <p class="link karla-font smallest-font" style="margin-right: 0px; color: #f01f5a">HOME</p>
+                </a>
+                <a href="/galeria">
+                    <p class="karla-font smallest-font" style="margin-right: 0px; color: #530E7E">GALERIA</p>
+                </a>
+                <a href="/about-us">
+                    <p class="karla-font smallest-font" style="margin-right: 0px; color: #008dde">QUIENES SOMOS</p>
+                </a>
+            </section>
+            <section class="content2">
+                <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                <img src="{% static 'img/shoping-cart.png' %}" alt="">
+            </section>
+        </nav>
+    </header>
+
+    <section class="hero-container">
+        <div>
+            <div class="hero-content">
+                <h1>GRUPO CERO</h1>
+                <p>Explora accesorios únicos: orfebrería con diamantes y minerales preciosos, además de prendas tejidas en lana.</p>
+                <p>¡Eleva tu estilo! ✨🧶</p>
+                    <button class="call-to-action">EXPLORAR</button>
+            </div>
+        </div>
+        <div class="flex-jc-end-ov-hidden">
+            <img src="{% static 'img/Hero-bg-img.png' %}" alt="">
+        </div>
+
+    </section>
+    <main>
+        <section>
+            <div class="carousel-container">
+                <div id="carousel1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner box-shadow">
+                        <div class="carousel-item active">
+                            <img class="d-block mx-auto imagen" src="{% static 'img/img-1.png' %}" alt="" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto imagen" src="{% static 'img/img-2.png' %}" alt="" />
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="medium-font bold">🌟 ¡DESCUBRE LA MAGIA DEL ARTE EN NUESTRA TIENDA! 🌟</h2>
+            <p class="small-font">En nuestra tienda, encontrarás una increíble variedad de accesorios artísticos que le darán un toque especial a tu vida. Sumérgete en el mundo de la orfebrería, donde cada pieza de joyería con diamantes y minerales preciosos cuenta una historia única.</p> 
+            <p class="small-font">Además, ven y maravíllate con nuestras prendas tejidas en lana, creadas con amor y habilidad para ofrecerte comodidad y estilo en cada puntada. ¡No esperes más! Te invitamos a explorar nuestra tienda y descubrir las maravillosas creaciones que tenemos para ti. ¡Estamos seguros de que encontrarás algo que te encante! 💎🧶💖 </p>
+        </section>
+    </main>
+    <footer class="box-shadow smallest-font">
+        <p>Carlos Vera - Nicolás Acuña - Bryan Moscoso</p>
+        <p>GrupoCero@2023</p>
+    </footer>
+    
+    <script src="{% static 'scripts/dom-events.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

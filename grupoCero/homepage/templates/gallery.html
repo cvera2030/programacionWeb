@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Karla:wght@400;600;700&family=Manjari:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/gallery.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <section class="content1">
+                <img src="{% static 'img/Logo.png' %}" alt="">
+                <a href="/">
+                    <p class="link karla-font smallest-font" style="margin-right: 0px; color: #f01f5a">HOME</p>
+                </a>
+                <a href="/galeria">
+                    <p class="karla-font smallest-font" style="margin-right: 0px; color: #530E7E">GALERIA</p>
+                </a>
+                <a href="/about-us">
+                    <p class="karla-font smallest-font" style="margin-right: 0px; color: #008dde">QUIENES SOMOS</p>
+                </a>
+            </section>
+            <section class="content2">
+                <a href="/login-page"><p class="bold smallest-font">INICIAR SESIÓN</p></a>
+                <img src="{% static 'img/shoping-cart.png' %}" alt="">
+            </section>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="description">
+            <div class="content">
+                <p class="josefin-font medium-font">🛍️ ¡ELIGE TUS FAVORITOS EN NUESTRA GALERIA DE ARTE! 🛍️</p>
+                <p class="josefin-font smallest-font">Navega por nuestra galería, disfruta de la variedad y el encanto de cada creación y selecciona las obras que más te inspiren. Añade tus favoritos al carrito y prepárate para llevar el arte y la belleza a tu hogar. ¡Felices compras! 🎨💍🧣🛒</p>
+            </div>
+            <div class="image">
+                <!-- <p>Hagamos como que esto es una imagen</p> -->
+                <img src="{% static 'img/gallery-header.png' %}" alt="">
+            </div>
+        </section>
+
+        <section class="shop-articles">
+            <div class="search-bar"></div>
+            <div class="articles-list">
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+                <article class="shop-item"></article>
+            </div>
+        </section>
+    </main>
+    <footer class="box-shadow smallest-font">
+        <p>Carlos Vera - Nicolás Acuña - Bryan Moscoso</p>
+        <p>GrupoCero@2023</p>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
